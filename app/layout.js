@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import CustomLink from "./components/CustomLink";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,11 +24,19 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {/* navbar */}
-        <ul>
-          <li>home</li>
-          <li>about</li>
-          <li>contact</li>
-        </ul>
+        <nav className="p-4 border-b border-gray-400">
+          <ul className="flex gap-5">
+            <li>
+              <CustomLink path='/'>Home</CustomLink>
+            </li>
+            <li>
+              <CustomLink path='/about'>about</CustomLink>
+            </li>
+            <li>
+              <CustomLink path='/dashboard/settings'>settings</CustomLink>
+            </li>
+          </ul>
+        </nav>
         {children}
       </body>
     </html>
