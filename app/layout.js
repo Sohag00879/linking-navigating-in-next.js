@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
               <CustomLink path='/about'>about</CustomLink>
             </li>
             <li>
-              <CustomLink path='/dashboard/settings'>settings</CustomLink>
+              <CustomLink prefetch={false} path='/dashboard/settings'>settings</CustomLink>
             </li>
           </ul>
         </nav>
